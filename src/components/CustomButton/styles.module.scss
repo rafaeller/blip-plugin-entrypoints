@@ -1,0 +1,72 @@
+@import '~blip-toolkit/dist/scss/main';
+@import '~blip-ds/dist/collection/styles/_colors.scss';
+
+.button {
+    transition: all 0.5s ease 0s;
+
+    &.short {
+        height: 2rem;
+    }
+
+    &.standard {
+        height: 2.5rem;
+    }
+
+    &.active {
+        &.primary-trackings {
+            background: $color-primary-main;
+            color: $color-neutral-light-snow;
+        }
+
+        &.primary {
+            background: $color-primary-night;
+        }
+
+        &.secondary {
+            background: $color-hover-light;
+            color: $color-primary-main;
+        }
+
+        &.secondary-dark {
+            background: $color-neutral-medium-elephant;
+            color: #fff;
+        }
+
+        &.secondary-delete {
+            background: $color-extend-reds-delete;
+            color: #fff;
+        }
+
+        &.tertiary {
+            background: $color-hover-light;
+        }
+
+        &.delete {
+            background: $color-extend-reds-dragon;
+        }
+
+        &.ghost {
+            background: $color-hover-light;
+        }
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+
+        &.primary {
+            background: $color-primary-light;
+        }
+
+        &.secondary,
+        &.primary-trackings,
+        &.secondary-delete,
+        &.tertiary,
+        &.ghost {
+            background: transparent;
+        }
+
+        &.delete {
+            background: $color-disabled-wrong;
+        }
+    }
+}

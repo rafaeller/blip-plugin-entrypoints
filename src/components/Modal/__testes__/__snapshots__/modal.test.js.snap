@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Modal component should render correctly 1`] = `
+<div
+  class="h-100 w-100 center pa0 pt4-ns fixed z-9999 dn modal-open"
+>
+  <div
+    class="h-100 w-100 absolute top-0 left-0 bg-black-70 modal-mask"
+    data-testid="close-overlay"
+  />
+  <div
+    class="w-100 relative center modal-content w-50-ns"
+  >
+    <div
+      class="bg-white shadow-6 br3 pa4"
+    >
+      <div
+        class="h-100 w-100 flex flex-column flex-nowrap"
+      >
+        <div
+          class="relative flex items-center"
+        >
+          <div
+            class="f3 fw6 lh-copy ma0 mw6 truncate bp-c-neutral-dark-desk"
+          >
+            My Modal
+          </div>
+          <div
+            aria-label="Close"
+            class="pointer ml-auto bp-c-neutral-dark-rooftop"
+            data-testid="close-modal-icon"
+          >
+            <svg>
+              close-icon.svg
+            </svg>
+          </div>
+        </div>
+        <div
+          class="pt1-5 pb1-5"
+        >
+          Content
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

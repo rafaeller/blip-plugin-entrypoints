@@ -1,0 +1,25 @@
+.modal-open {
+    display: block;
+}
+
+.modal-open .modal-mask, .modal-open .modal-content {
+    animation: FadeIn 0.3s cubic-bezier(0.7, 0.3, 0.1, 1);
+    opacity: 1;
+    pointer-events: auto;
+    transition: none;
+}
+
+.modal-mask, .modal-content {
+    opacity: 0;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+@keyframes FadeIn {
+    0% {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

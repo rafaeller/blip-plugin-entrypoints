@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CustomButton component should render correctly 1`] = `
+<button
+  class="flex items-center f6 b br3 outline-0 button standard secondary w-auto nowrap pointer pv2 ph3 bn bg-transparent bp-c-neutral-dark-rooftop hover-bp-c-primary-main hover-bp-bg-disabled-bg active-bp-c-primary-main active-bp-bg-hover-light"
+  type="button"
+>
+  Mocked Button
+</button>
+`;

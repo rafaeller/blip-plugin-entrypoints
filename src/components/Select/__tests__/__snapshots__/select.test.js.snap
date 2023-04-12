@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Select component should render correctly 1`] = `
+<bds-select
+  disabled="false"
+  placeholder="Select.."
+  value=""
+>
+  <bds-select-option
+    value="Cat"
+  >
+    Meow
+  </bds-select-option>
+  <bds-select-option
+    value="Dog"
+  >
+    Woof
+  </bds-select-option>
+</bds-select>
+`;
