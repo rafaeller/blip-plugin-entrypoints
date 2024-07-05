@@ -52,7 +52,7 @@ const EntryPoints = () => {
         if (!bucketEntryPoints) {
             await storeBucketVariable("EntryPoints-Data-Plugin", { "entryPoints": [] })
         } else {
-            setEntryPointsData(bucketEntryPoints["entryPoints"])
+            setEntryPointsData(sortEntryPoints(bucketEntryPoints["entryPoints"]))
         }
         setEdited(false)
     }
@@ -61,7 +61,7 @@ const EntryPoints = () => {
         setEntryPointsData(entryPointsData => {
             const updatedList = [...entryPointsData]
             updatedList[index] = newItem
-            return updatedList
+            return sortEntryPoints(updatedList)
         })
         setEdited(true)
     }
@@ -70,13 +70,11 @@ const EntryPoints = () => {
         setEntryPointsData(entryPointsData => {
             if (entryPointsData.length > 1) {
                 let updatedList = [...entryPointsData]
-                updatedList = updatedList.splice(index, 1)
-                return updatedList
+                updatedList.splice(index, 1)
+                return sortEntryPoints(updatedList)
             } else {
                 return []
             }
-
-
         })
         setEdited(true)
     }
@@ -92,8 +90,12 @@ const EntryPoints = () => {
                 "Convenio": "",
                 "Direcionamento": ""
             })
-            return updatedList
+            return sortEntryPoints(updatedList)
         })
+    }
+
+    const sortEntryPoints = (entryPoints) => {
+        return entryPoints.sort((a, b) => b.Mensagem.length - a.Mensagem.length);
     }
 
     const handleDownload = () => {
@@ -104,7 +106,6 @@ const EntryPoints = () => {
         downloadLink.download = `EntryPoints_${appInfo.shortName}_${new Date().toISOString()}.json`;
         downloadLink.click();
     };
-
     return (
         <>
             <div className="ph1 ph4-m ph5-ns mt3">
